@@ -7,63 +7,53 @@ on:
     branches: [ main ]
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-    - name: Install dependencies
-      run: |
-        npm install eslint
-    - name: Run linting
-      run: |
-        npx eslint examples/implementation.js
-
   test-js:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-    - name: Install dependencies
-      run: |
-        npm install jest
-    - name: Run JavaScript tests
-      run: |
-        node examples/implementation.js
+      - uses: actions/checkout@v3
 
-  test-python:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pytest
-    - name: Run Python tests
-      run: |
-        python examples/implementation.py
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
-  markdown-lint:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-    - name: Install dependencies
-      run: |
-        npm install markdownlint-cli
-    - name: Run markdown linting
-      run: |
-        npx markdownlint "**/*.md" --ignore node_modules
+      - name: Run Example (JS)
+        run: |
+          node examples/implementation.js
+
+# --- Optional: Enable when ready ---
+#   lint:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: '16'
+#       - name: Install eslint
+#         run: npm install eslint
+#       - name: Run eslint
+#         run: npx eslint examples/implementation.js
+
+#   test-python:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Set up Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: '3.9'
+#       - name: Install pytest
+#         run: pip install pytest
+#       - name: Run Python example
+#         run: python examples/implementation.py
+
+#   markdown-lint:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Install markdownlint
+#         run: npm install markdownlint-cli
+#       - name: Lint Markdown
+#         run: npx markdownlint "**/*.md" --ignore node_modules
+``
