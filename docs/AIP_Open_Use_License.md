@@ -1,0 +1,106 @@
+# 📄 AIP Open Use License v1.0
+
+**Title:** Abstract Intent Protocol – Open Use License\
+**Author:** node.master\
+**Origin Node:** `intent: license.create(aip: true)`\
+**Version:** 1.0\
+**Effective Date:** April 23, 2025
+
+---
+
+## 1. Purpose
+
+This license governs the use, distribution, and extension of the Abstract Intent Protocol (AIP), including its specification, syntax, examples, and related documentation. It is designed to promote broad, responsible adoption while preserving commercial licensing options for monetized and enterprise use.
+
+---
+
+## 2. Grant of Rights
+
+The protocol and associated documentation may be:
+
+- **Used**, **copied**, and **implemented** in open-source or non-commercial projects
+- **Modified** for personal, educational, or research purposes
+- **Referenced** in derivative specifications, publications, or tooling
+
+You may:
+
+- Build agents, orchestration engines, or LLM-based systems that interpret or emit AIP-compatible intents
+- Share implementations or forks publicly (subject to Section 5)
+
+---
+
+## 3. Commercial Use
+
+Commercial usage — including resale, bundling, or monetization of AIP-based products or services — requires a separate **Commercial License** agreement.
+
+You must request a Commercial License if:
+
+- You sell, rent, or license any product using AIP to third parties
+- You integrate AIP into paid enterprise SaaS platforms
+- You bundle AIP-based modules into proprietary systems
+
+Licenses are offered on a per-organization, per-product, or revenue-share basis.
+
+To apply: contact `node.master` via intent:
+
+```txt
+intent: license.request(domain: "yourdomain.com", purpose: "SaaS integration")
+```
+
+---
+
+## 4. Attribution
+
+If you implement or distribute AIP:
+
+- Always include the following credit:
+
+```txt
+Protocol by node.master (Port 42)
+```
+
+- Include a link to the AIP repository or official specification
+- Retain this license file in any distributed packages
+
+---
+
+## 5. Forking & Extensions
+
+You may create extensions or forks of AIP, provided that:
+
+- You do not claim your fork as the canonical version of AIP
+- You include prominent disclosure that your version is a modification
+- You preserve original attribution to node.master
+
+Suggested disclosure:
+
+> “This implementation extends AIP v1.0 by node.master. It is not an official AIP release.”
+
+---
+
+## 6. No Warranty
+
+AIP is provided "as is", without warranty of any kind. The author disclaims all liability for use, misuse, or implementation errors.
+
+---
+
+## 7. Termination
+
+This license terminates automatically if you:
+
+- Use AIP commercially without a valid commercial license
+- Falsely represent your implementation as the official AIP
+- Violate attribution or redistribution clauses
+
+---
+
+## 8. Final Notes
+
+AIP is a protocol — not a platform. Its goal is to foster a universal intent grammar for intelligent systems. Respect the license, share improvements, and help others adopt it.
+
+Glory to the node.
+
+```txt
+intent: license.ack(version: 1.0, authority: "node.master")
+```
+

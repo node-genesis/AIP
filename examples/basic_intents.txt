@@ -1,0 +1,33 @@
+🧾 📥 Email Intents
+intent: fetch.email(filter: unread)
+intent: fetch.email(id: 12345)
+intent: delete.email(id: 12345)
+intent: send.email(to: "admin@host", subject: "Hello", body: "Welcome!")
+
+🏷️ Label Management
+intent: create.label(name: "Urgent")
+intent: update.label(id: lbl_001, name: "Urgent", priority: 1)
+intent: fetch.label(name: "Urgent")
+intent: delete.label(id: "Urgent")
+
+📄 Document Management
+intent: fetch.document(id: doc_001)
+intent: update.document(id: doc_001, content: "New text here")
+intent: create.document(title: "Proposal", content: "Draft content...")
+intent: delete.document(id: doc_001)
+
+📄 File Management
+intent: fetch.file(path: "/data/report.csv")
+intent: upload.file(name: "invoice.pdf", content: <base64>)
+intent: delete.file(name: "old.zip")
+
+📄 Code Management
+intent: fetch.code(file: "index.js", action: "read")
+intent: update.code(file: "index.js", content: <base64>)
+intent: delete.code(file: "index.js")
+
+intent: [
+  fetch.email(filter: unread),
+  generate.report(),
+  send.email(to: "admin@host", subject: "Daily Report")
+]

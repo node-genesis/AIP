@@ -1,0 +1,11 @@
+intent: node.announce(
+  id: "genesis",
+  port: 42,
+  role: "Genesis",
+  version: "1.0.0",
+  capabilities: ["orchestrate", "route", "log", "validate", "interpret"],
+  patterns: ["fetch.*", "create.label", "node.validate"],
+  auth: "optional-shared-secret",
+  description: "Root controller for AIP mesh"
+)
+

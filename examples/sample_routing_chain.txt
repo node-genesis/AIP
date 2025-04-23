@@ -1,0 +1,1 @@
+intent: [fetch.email(filter: unread), generate.report(), send.report(to: 'admin@host')]
